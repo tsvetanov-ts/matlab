@@ -53,7 +53,7 @@ nd = find(ec1807kf(:, 1) >= 7.224 & ec1807kf(:, 1) <= 11.57);
 Sd(nd) = 2*0.08 - ec1807kf(nd,2);
 
 
-runtime = 2;%/*Algorithm can be run many times in order to see its robustness*/
+runtime = 30;%/*Algorithm can be run many times in order to see its robustness*/
 
 ttt = cputime;
 
@@ -132,7 +132,7 @@ Mins_all(run) = fmin;
 
 Pars_all(:, run) = par;
 Ws(run) = W;
-Results_all1 = [Pars_all' Mins_all' Ws'];
+Results_all = [Pars_all' Mins_all' Ws'];
 
 end
 
